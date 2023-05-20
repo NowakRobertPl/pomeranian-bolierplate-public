@@ -7,6 +7,7 @@ import { blockRouterMetaData as blockRouterMetaCssAnimations } from './CssAnimat
 import { blockRouterMetaData as blockRouterMetaMultimedia } from './ExerciseMultimedia/router-data';
 import { blockRouterMetaData as blockRouterMetaImages } from './ExercisesImages/router-data';
 import { blockRouterMetaData as blockRouterMetaBoxModel } from './BoxModel/router-data';
+import { blockRouterMetaData as blockRouterMetaFloatAndPositioning } from './FloatsAndPositioning/router-data';
 import { blockRouterMetaData as blockRouterHTMLTables } from './HTMLTables/router-data';
 import { blockRouterMetaData as blockRouterArray } from './ArrayRenderToTable/router-data';
 
@@ -18,7 +19,9 @@ export const blockRouterMetaData = [
   blockRouterMetaMultimedia,
   blockRouterMetaImages,
   blockRouterMetaBoxModel,
+  blockRouterMetaFloatAndPositioning,
   blockRouterHTMLTables,
   blockRouterArray,
+
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
