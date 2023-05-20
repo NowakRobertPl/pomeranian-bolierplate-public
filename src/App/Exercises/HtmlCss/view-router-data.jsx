@@ -22,6 +22,5 @@ export const blockRouterMetaData = [
   blockRouterMetaFloatAndPositioning,
   blockRouterHTMLTables,
   blockRouterArray,
-
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
