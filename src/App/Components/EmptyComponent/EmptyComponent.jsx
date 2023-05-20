@@ -1,5 +1,5 @@
 import './styles.css';
 
-export const EmptyComponent = () => {
+export const CookieBanner = () => {
   return <div>Change me</div>;
 };
