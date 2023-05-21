@@ -1,10 +1,10 @@
-import { canDrive } from './index';
+import { Exercise } from './index';
 
 export const blockRouterMetaData = {
   path: 'js-numbers-training',
-  // date: null,
+  date: null,
   linkLabel: 'Liczby i booleany w JS',
-  blockNo: 19,
-  element: <canDrive />,
+  blockNo: 20,
+  element: <Exercise />,
   tags: ['numbers', 'JS', 'bool', 'booleans'],
 };
