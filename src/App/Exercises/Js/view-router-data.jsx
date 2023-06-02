@@ -8,6 +8,7 @@ import { blockRouterMetaData as blockRouterMetaDataJsBooleans } from './Exercise
 import { blockRouterMetaData as blockRouterMetaDataExerciseJsNumbers } from './Exercise-js-numbers/router-data';
 import { blockRouterMetaData as blockRouterMetaDataJsNumbers } from './JsNumbers/router-data';
 import { blockRouterMetaData as blockRouterMetaDataJsFunctionsBasics } from './Exercise-js-functions-basics/router-data';
+import { blockRouterMetaData as blockRouterMetaDataWhackamole } from './whackamole/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -18,5 +19,6 @@ export const blockRouterMetaData = [
   blockRouterMetaDataJsNumbers,
   blockRouterMetaDataJsFunctionsBasics,
   blockRouterMetaDataJsFunctions,
+  blockRouterMetaDataWhackamole,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

@@ -1,0 +1,23 @@
+.playground {
+  display: flex;
+  width: 600px; /* szerokość całej planszy */
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+
+.field {
+  position: relative;
+  background-color: #ccc;
+  padding: 50px 50px;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+.field .Mole {
+  position: absolute;
+  display: flex;
+  left: 4px;
+  bottom: 10px;
+}
