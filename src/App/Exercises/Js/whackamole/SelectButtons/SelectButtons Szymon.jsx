@@ -3,10 +3,10 @@ import { Button } from '../Button/Button';
 import { useState } from 'react';
 
 export const SelectButtons = (props) => {
+  // props.options
   const { options } = props;
 
   const [newOptions, setNewOptions] = useState(options);
-  // newOptions to wybrana przez "setNewOptions" która jest naszym wyborem(kliknięciem)
 
   function handleClick(value) {
     setNewOptions(
@@ -21,7 +21,7 @@ export const SelectButtons = (props) => {
 
   return (
     <>
-      {newOptions.map(({ label, value, isActive }) => (
+      {newOptions.map(({ label, isActive, value }) => (
         <Button
           key={value}
           onClick={() => handleClick(value)}
