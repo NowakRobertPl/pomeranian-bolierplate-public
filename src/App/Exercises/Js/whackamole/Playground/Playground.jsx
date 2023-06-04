@@ -89,6 +89,7 @@ export const Playground = ({ score, setScore }) => {
     <div className="playground">
       {modifiedFields.map((field) => {
         const isMolePresent = field.id === fieldWithMoleId;
+
         const isClickedFieldWithMole =
           isMolePresent && field.hasClicked ? 'field-green' : '';
         const isClickedFieldWithoutMole =

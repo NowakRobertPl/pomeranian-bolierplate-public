@@ -3,31 +3,28 @@ import { Button } from '../Button/Button';
 import { Menu } from '../Menu/menu';
 import { useEffect, useState } from 'react';
 
-const koniecGry = ({ counter, setCounter }) => {
-  setCounter(counter);
-};
-
 export const GameView = ({
   setGameStarted,
   score,
   setScore,
-  czas,
-  setCzas,
+  options,
+  setTime,
+  time,
 }) => {
   //licznik czasu
 
-  const [counter, setCounter] = useState(2);
-
-  const koniecGry = () => {
-    counter = 0 ? setGameStarted(false) : '';
-  };
-
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      counter > 0 && setCounter(counter - 1);
+      time > 0 && setTime(time - 1);
     }, 1000);
     return () => clearTimeout(timeoutId);
-  }, [counter]);
+  }, [time]);
+
+  useEffect(() => {
+    if (time == 0) {
+      setGameStarted(false);
+    }
+  }, [time]);
 
   //Karolajna!
   //   const [count,setCount]=useState(60);
@@ -38,7 +35,7 @@ export const GameView = ({
   return (
     <>
       <Menu label="Czas do końca:">
-        <Button className="menu-label">{counter}</Button>
+        <Button className="menu-label">{time}</Button>
       </Menu>
       <Menu label="Wynik:">
         <Button className="value-field">{score}</Button>
@@ -47,8 +44,8 @@ export const GameView = ({
         <Button
           onClick={() => {
             setGameStarted(false);
-            setScore(0);
-            setCzas(0);
+            setTime(0);
+            // setScore(0);
           }}
         >
           STOP

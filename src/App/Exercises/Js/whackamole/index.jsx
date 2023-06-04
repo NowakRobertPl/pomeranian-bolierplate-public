@@ -2,12 +2,19 @@ import './styles.css';
 import { MenuView } from './MenuView/MenuView';
 import { GameView } from './GameView/GameView';
 import { Playground } from './Playground/Playground';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Result } from './Result/Result';
 
 export function Whackamole() {
   const [isGameStarted, setGameStarted] = useState(false);
   const [score, setScore] = useState(0);
-  const [czas, setCzas] = useState(0);
+  const [time, setTime] = useState(60);
+  const [initialTime, setInitialTime] = useState(time);
+
+  useEffect(() => {
+    time === 0 && setGameStarted(false);
+  }, [time]);
+
   return (
     <div className="hit-the-mole">
       <h4>Whack-a-mole</h4>
@@ -21,15 +28,24 @@ export function Whackamole() {
           setGameStarted={setGameStarted}
           score={score}
           setScore={setScore}
-          czas={czas}
-          setCzas={setCzas}
+          time={time}
+          setTime={setTime}
         />
       ) : (
-        <MenuView setGameStarted={setGameStarted} />
+        <MenuView
+          setTime={setTime}
+          time={time}
+          setGameStarted={setGameStarted}
+          isGameStarted={isGameStarted}
+          setInitialTime={setInitialTime}
+          initialTime={initialTime}
+          score={score}
+          setScore={setScore}
+        />
+        //
       )}
 
       <div>
-        {/* <ResultView result={result} /> */}
         {isGameStarted && <Playground score={score} setScore={setScore} />}
       </div>
     </div>
