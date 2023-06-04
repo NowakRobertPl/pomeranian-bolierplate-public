@@ -15,9 +15,16 @@
   height: 100px;
   cursor: pointer;
 }
-.field .Mole {
+.Mole {
   position: absolute;
   display: flex;
   left: 4px;
   bottom: 10px;
+}
+.field-green {
+  background-color: greenyellow;
+}
+
+.field-red {
+  background-color: red;
 }

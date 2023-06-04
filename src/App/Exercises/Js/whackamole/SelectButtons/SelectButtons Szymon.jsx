@@ -3,30 +3,25 @@ import { Button } from '../Button/Button';
 import { useState } from 'react';
 
 export const SelectButtons = (props) => {
-  const { options, setOptionChosen, setInitialTime } = props;
-  const [newOptions, setNewOptions] = useState(options);
+  // props.options
+  const { options } = props;
 
-  // newOptions to wybrana przez "setNewOptions" która jest naszym wyborem(kliknięciem)
+  const [newOptions, setNewOptions] = useState(options);
 
   function handleClick(value) {
     setNewOptions(
       newOptions.map((option) => {
         return {
           ...option,
-          isActive: option.value === value ? true : false,
+          isActive: option.value === value,
         };
       })
     );
-
-    const chosenOption = newOptions.find((option) => option.value === value);
-
-    setOptionChosen(chosenOption.value * 60);
-    setInitialTime(chosenOption.value * 60);
   }
 
   return (
     <>
-      {newOptions.map(({ label, value, isActive }) => (
+      {newOptions.map(({ label, isActive, value }) => (
         <Button
           key={value}
           onClick={() => handleClick(value)}

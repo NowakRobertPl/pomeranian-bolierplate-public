@@ -1,14 +1,41 @@
 import './styles.css';
 import { Button } from '../Button/Button';
 import { Menu } from '../Menu/menu';
+import { useEffect, useState } from 'react';
 
-let czas = '3';
+export const GameView = ({
+  setGameStarted,
+  score,
+  setScore,
+  options,
+  setTime,
+  time,
+}) => {
+  //licznik czasu
 
-export const GameView = ({ setGameStarted, score, setScore }) => {
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      time > 0 && setTime(time - 1);
+    }, 1000);
+    return () => clearTimeout(timeoutId);
+  }, [time]);
+
+  useEffect(() => {
+    if (time == 0) {
+      setGameStarted(false);
+    }
+  }, [time]);
+
+  //Karolajna!
+  //   const [count,setCount]=useState(60);
+  //   useEffect(()=>{setInterval(()=>)setCount((count) ->(count>0?count -1;'0'));
+  // },1000);
+  // },[count]);
+
   return (
     <>
       <Menu label="Czas do końca:">
-        <Button className="menu-label">{czas}</Button>
+        <Button className="menu-label">{time}</Button>
       </Menu>
       <Menu label="Wynik:">
         <Button className="value-field">{score}</Button>
@@ -17,7 +44,8 @@ export const GameView = ({ setGameStarted, score, setScore }) => {
         <Button
           onClick={() => {
             setGameStarted(false);
-            setScore(0);
+            setTime(0);
+            // setScore(0);
           }}
         >
           STOP
