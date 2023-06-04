@@ -1,0 +1,30 @@
+.font-test-family {
+  font-family: Chilanka;
+}
+/* .variable-string-placeholder p span */
+.variable-string-placeholder {
+  margin-left: 5px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu-label {
+  display: flex;
+  align-items: center;
+}
+
+.przycisk:hover {
+  margin: 10px;
+  border: none;
+  padding: 10px 20px;
+  background-color: rgb(108, 0, 210);
+  border-radius: 10px;
+}
+.przycisk {
+  margin: 10px;
+  border: none;
+  padding: 10px 20px;
+  background-color: rgb(165, 108, 218);
+  border-radius: 10px;
+}
