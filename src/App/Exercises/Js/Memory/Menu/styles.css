@@ -12,6 +12,7 @@
 .menu-label {
   display: flex;
   align-items: center;
+  width: 160px;
 }
 
 .przycisk:hover {
