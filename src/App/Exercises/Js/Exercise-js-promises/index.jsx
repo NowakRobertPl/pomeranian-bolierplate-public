@@ -21,5 +21,36 @@ export function JsPromisesExercise({
     //to possible option in useEffect array of dependencies to kick useEffect and cause rerender of the Component
   }, [parameterToEffect, getState]);
 
+  function logPromiseState(promise) {
+    promise
+      .then(() => {
+        //success
+        console.log('Stan:fulfilled');
+        console.log('Promise zakończony suckesem');
+      })
+      .catch(() => {
+        //failed
+        console.log('Stan:rejected');
+        console.log('Promise zakończony błędem');
+      })
+      .finally(() => {
+        //nevertheless I will do this:
+        console.log('Stan:');
+        console.log('Promise zakończony');
+      });
+  }
+
+  const myPromise = new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      const random = Math.random();
+
+      if (random < 0.5) {
+        resolve();
+      } else {
+        rejected();
+      }
+    }, 2000);
+  });
+
   return <div className="playing-with-js-promises"> </div>;
 }
