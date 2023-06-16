@@ -10,6 +10,7 @@ import { blockRouterMetaData as blockRouterMetaDataJsNumbers } from './JsNumbers
 import { blockRouterMetaData as blockRouterMetaDataJsFunctionsBasics } from './Exercise-js-functions-basics/router-data';
 import { blockRouterMetaData as blockRouterMetaDataWhackamole } from './whackamole/router-data';
 import { blockRouterMetaData as blockRouterMetaDataMemoryGame } from './MemoryGame/router-data';
+import { blockRouterMetaData as blockRouterMetaDataPromises } from './Exercise-js-promises/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -22,5 +23,6 @@ export const blockRouterMetaData = [
   blockRouterMetaDataJsFunctions,
   blockRouterMetaDataWhackamole,
   blockRouterMetaDataMemoryGame,
+  blockRouterMetaDataPromises,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
