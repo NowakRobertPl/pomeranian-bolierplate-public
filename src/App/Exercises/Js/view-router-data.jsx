@@ -11,6 +11,8 @@ import { blockRouterMetaData as blockRouterMetaDataJsFunctionsBasics } from './E
 import { blockRouterMetaData as blockRouterMetaDataWhackamole } from './whackamole/router-data';
 import { blockRouterMetaData as blockRouterMetaDataMemoryGame } from './MemoryGame/router-data';
 import { blockRouterMetaData as blockRouterMetaDataSavedInput } from './SavedInput//router-data';
+import { blockRouterMetaData as blockRouterMetaDataOopInJs } from './Exercise-oop/router-data';
+import { blockRouterMetaData as blockRouterMetaDataTryCatch } from './Exercise-try-catch/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -24,5 +26,7 @@ export const blockRouterMetaData = [
   blockRouterMetaDataWhackamole,
   blockRouterMetaDataMemoryGame,
   blockRouterMetaDataSavedInput,
+  blockRouterMetaDataOopInJs,
+  blockRouterMetaDataTryCatch,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
