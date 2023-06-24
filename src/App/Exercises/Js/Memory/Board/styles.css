@@ -1,6 +1,6 @@
 .playground {
   display: flex;
-  width: 600px; /* szerokość całej planszy */
+  width: 400px; /* szerokość całej planszy */
   gap: 10px;
   flex-wrap: wrap;
   margin: 50px;
@@ -11,8 +11,8 @@
   background-color: #ccc;
   padding: 50px 50px;
   border-radius: 5px;
-  width: 100px;
-  height: 100px;
+  width: 1000px;
+  height: 1000px;
   cursor: pointer;
 }
 .Mole {
