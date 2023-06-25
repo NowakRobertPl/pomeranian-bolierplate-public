@@ -12,6 +12,7 @@ import { blockRouterMetaData as blockRouterMetaDataWhackamole } from './whackamo
 import { blockRouterMetaData as blockRouterMetaDataMemoryGame } from './MemoryGame/router-data';
 import { blockRouterMetaData as blockRouterMetaDataPromiseMethodsTraining } from './PromiseMethodsTraining/router-data';
 import { blockRouterMetaData as blockRouterMetaDataPromiseUsageFetch } from './PromiseUsageFetch/router-data';
+import { blockRouterMetaData as blockRouterMetaDataToDo } from './ToDo/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -26,5 +27,6 @@ export const blockRouterMetaData = [
   blockRouterMetaDataMemoryGame,
   blockRouterMetaDataPromiseMethodsTraining,
   blockRouterMetaDataPromiseUsageFetch,
+  blockRouterMetaDataToDo,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
